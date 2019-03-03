@@ -4,6 +4,11 @@ ifeq ($(OS),Windows_NT)
   LD = ..\..\gcc-arm-none-eabi-6-2017-q1-update-win32\bin\arm-none-eabi-gcc
   CP = ..\..\gcc-arm-none-eabi-6-2017-q1-update-win32\bin\arm-none-eabi-objcopy
   IF = ..\..\gcc-arm-none-eabi-6-2017-q1-update-win32\bin\arm-none-eabi-size
+else
+  CC = arm-none-eabi-gcc
+  LD = arm-none-eabi-gcc
+  CP = arm-none-eabi-objcopy
+  IF = arm-none-eabi-size
 endif
 
 # Скрипт для линкера
